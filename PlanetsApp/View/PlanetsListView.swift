@@ -12,6 +12,7 @@ struct PlanetsListView: View {
     @State private var isErrorOccured = true
     
     var body: some View {
+        NavigationView {
             VStack {
                 switch viewModel.viewState {
                 case .loading:
@@ -25,7 +26,8 @@ struct PlanetsListView: View {
                 }
             }
             .navigationTitle(Text(LocalizedStringKey("PlanetsLists")))
-            .task {
+        }
+        .task {
             await viewModel.getPlanetsList(path: RestApiEndPoints.planetsPath)
         }
     }
@@ -36,6 +38,9 @@ struct PlanetsListView: View {
             NavigationLink {
             }label: {
                 Text(planet.name)
+                    .bold()
+                    .frame(height: 100)
+                    .accessibilityIdentifier("PlanetsName")
             }
         }
     }
@@ -46,6 +51,9 @@ struct PlanetsListView: View {
             NavigationLink {
             }label: {
                 Text(planet.name ?? "")
+                    .bold()
+                    .frame(height: 100)
+                    .accessibilityIdentifier("PlanetsName")
             }
         }
     }

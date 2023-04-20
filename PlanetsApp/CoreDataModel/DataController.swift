@@ -51,7 +51,7 @@ class DataController: ObservableObject {
         let request: NSFetchRequest<PlanetEntity> = PlanetEntity.fetchRequest()
         do {
             let results = try context.fetch(request)
-            return results
+            return results.reversed()
         } catch {
             print(error)
         }

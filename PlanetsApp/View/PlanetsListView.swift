@@ -35,26 +35,20 @@ struct PlanetsListView: View {
     @ViewBuilder
     func showPlanetsListView() -> some View {
         List(viewModel.planetsList){ planet in
-            NavigationLink {
-            }label: {
-                Text(planet.name)
-                    .bold()
-                    .frame(height: 100)
-                    .accessibilityIdentifier("PlanetsName")
-            }
+            Text(planet.name)
+                .bold()
+                .frame(height: 100)
+                .accessibilityIdentifier("PlanetsName")
         }
     }
     
     @ViewBuilder
     func showErrorView() -> some View {
         List(viewModel.corePlanetsList){ planet in
-            NavigationLink {
-            }label: {
-                Text(planet.name ?? "")
-                    .bold()
-                    .frame(height: 100)
-                    .accessibilityIdentifier("PlanetsName")
-            }
+            Text(planet.name ?? "")
+                .bold()
+                .frame(height: 100)
+                .accessibilityIdentifier("PlanetsName")
         }
     }
 }

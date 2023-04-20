@@ -37,9 +37,6 @@
 		2090030D29F0594F0038AD10 /* MockRESTAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090030C29F0594F0038AD10 /* MockRESTAPIManager.swift */; };
 		2090030F29F0597E0038AD10 /* PlanetRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090030E29F0597E0038AD10 /* PlanetRepositoryTests.swift */; };
 		2090031129F05B130038AD10 /* RestApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090031029F05B130038AD10 /* RestApiManagerTests.swift */; };
-		2090031329F05B870038AD10 /* MockPlanetsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090031229F05B870038AD10 /* MockPlanetsRepository.swift */; };
-		2090031529F05BA10038AD10 /* MockCoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090031429F05BA10038AD10 /* MockCoreDataRepository.swift */; };
-		2090031829F05C540038AD10 /* PlanetsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090031729F05C540038AD10 /* PlanetsViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,9 +90,6 @@
 		2090030C29F0594F0038AD10 /* MockRESTAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRESTAPIManager.swift; sourceTree = "<group>"; };
 		2090030E29F0597E0038AD10 /* PlanetRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRepositoryTests.swift; sourceTree = "<group>"; };
 		2090031029F05B130038AD10 /* RestApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManagerTests.swift; sourceTree = "<group>"; };
-		2090031229F05B870038AD10 /* MockPlanetsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlanetsRepository.swift; sourceTree = "<group>"; };
-		2090031429F05BA10038AD10 /* MockCoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataRepository.swift; sourceTree = "<group>"; };
-		2090031729F05C540038AD10 /* PlanetsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +120,6 @@
 		205D5EEA29EEA59800F8E7E5 = {
 			isa = PBXGroup;
 			children = (
-				2043B27429F1574F00200F1F /* Localizable.strings */,
 				205D5EF529EEA59800F8E7E5 /* PlanetsApp */,
 				205D5F0C29EEA59A00F8E7E5 /* PlanetsAppTests */,
 				205D5F1629EEA59A00F8E7E5 /* PlanetsAppUITests */,
@@ -147,13 +140,14 @@
 		205D5EF529EEA59800F8E7E5 /* PlanetsApp */ = {
 			isa = PBXGroup;
 			children = (
-				205D5F8129EECA8800F8E7E5 /* DataModel */,
+				205D5F2629EEA90800F8E7E5 /* Model */,
 				205D5F4129EEB02B00F8E7E5 /* View */,
 				205D5F3E29EEAE2F00F8E7E5 /* ViewModel */,
+				205D5F8129EECA8800F8E7E5 /* CoreDataModel */,
 				205D5F3B29EEAD3300F8E7E5 /* Repository */,
 				205D5F2929EEAA1B00F8E7E5 /* Service */,
-				205D5F2629EEA90800F8E7E5 /* Model */,
 				205D5EF629EEA59800F8E7E5 /* PlanetsAppApp.swift */,
+				2043B27429F1574F00200F1F /* Localizable.strings */,
 				205D5EFF29EEA59900F8E7E5 /* Assets.xcassets */,
 				205D5F0129EEA59900F8E7E5 /* PlanetsApp.entitlements */,
 				205D5F0229EEA59900F8E7E5 /* Preview Content */,
@@ -173,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				209002FC29F054920038AD10 /* ServiceTests */,
-				209002FB29F054870038AD10 /* ViewModelTests */,
 				209002FA29F0547D0038AD10 /* RepositoryTests */,
 				205D5F0D29EEA59A00F8E7E5 /* PlanetsAppTests.swift */,
 			);
@@ -245,13 +238,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		205D5F8129EECA8800F8E7E5 /* DataModel */ = {
+		205D5F8129EECA8800F8E7E5 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
 				205D5F8229EECA9600F8E7E5 /* DataController.swift */,
 				205D5F8429EECB0500F8E7E5 /* PlanetsApp.xcdatamodeld */,
 			);
-			path = DataModel;
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 		209002FA29F0547D0038AD10 /* RepositoryTests */ = {
@@ -262,16 +255,6 @@
 				2090030E29F0597E0038AD10 /* PlanetRepositoryTests.swift */,
 			);
 			path = RepositoryTests;
-			sourceTree = "<group>";
-		};
-		209002FB29F054870038AD10 /* ViewModelTests */ = {
-			isa = PBXGroup;
-			children = (
-				2090031229F05B870038AD10 /* MockPlanetsRepository.swift */,
-				2090031429F05BA10038AD10 /* MockCoreDataRepository.swift */,
-				2090031729F05C540038AD10 /* PlanetsViewModelTest.swift */,
-			);
-			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 		209002FC29F054920038AD10 /* ServiceTests */ = {
@@ -450,11 +433,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				205D5F0E29EEA59A00F8E7E5 /* PlanetsAppTests.swift in Sources */,
-				2090031829F05C540038AD10 /* PlanetsViewModelTest.swift in Sources */,
-				2090031329F05B870038AD10 /* MockPlanetsRepository.swift in Sources */,
 				2090030D29F0594F0038AD10 /* MockRESTAPIManager.swift in Sources */,
 				209002DA29EEEEED0038AD10 /* PlanetsApp.xcdatamodeld in Sources */,
-				2090031529F05BA10038AD10 /* MockCoreDataRepository.swift in Sources */,
 				2090030F29F0597E0038AD10 /* PlanetRepositoryTests.swift in Sources */,
 				2090031129F05B130038AD10 /* RestApiManagerTests.swift in Sources */,
 				2090030429F0586C0038AD10 /* MockRestApiNetworking.swift in Sources */,
